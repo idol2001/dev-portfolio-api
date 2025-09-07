@@ -52,19 +52,6 @@ git clone https://github.com/idol2001/dev-portfolio-api.git
 cd dev-portfolio-api
 ```
 
-### 配置环境变量
-
-创建 `.env` 文件并配置以下内容：
-
-```env
-DB_HOST=localhost
-DB_PORT=5432
-DB_USER=your_user
-DB_PASSWORD=your_password
-DB_NAME=dev_portfolio
-JWT_SECRET=your_secret
-```
-
 ### 安装依赖
 
 ```bash
@@ -83,9 +70,6 @@ go run main.go
 go test ./...
 ```
 
-## API 文档
-
-启动项目后，访问 [http://localhost:8080/swagger/index.html](http://localhost:8080/swagger/index.html) 查看 Swagger API 文档。
 
 ## 贡献
 
