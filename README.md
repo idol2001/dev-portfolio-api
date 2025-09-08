@@ -24,23 +24,24 @@ dev-portfolio 是一个用 Go 语言开发的开发者个人网站和博客的�
 ```
 dev-portfolio-api/
 ├── api/
-│   ├── handlers/
-│   └── routes/
+│   ├── handlers/
+│   └── routes/
 ├── configs/
-│   └── config.yaml
+│   └── config.se.yml
+├── initialize/
 ├── internal/
-│   ├── services/
-│   ├── dto/
-│   └── dao/
+│   ├── dto/
+│   └── services/
+├── logs/
+├── middleware/
 ├── models/
-│   └── album.go
 ├── pkg/
-│   └── utils/
+│   └── utils/
+├── main.go     # Application entry point
 ├── go.mod
 ├── go.sum
 ├── Dockerfile (optional)
-└── main.go  # Application entry point
-
+└── README.md
 ```
 
 ## 快速开始
