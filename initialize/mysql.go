@@ -78,8 +78,7 @@ func Mysql() {
 	sqlDB.SetConnMaxLifetime(time.Hour)
 	global.DB = db
 	// 自动迁移表结构
-	global.DB.AutoMigrate(&profile.ProfileSkill{})
-	global.DB.AutoMigrate(&profile.ProfileSkillGroup{})
+	global.DB.AutoMigrate(profile.Models...)
 
 	global.Log.Info("初始化mysql完成")
 	if err != nil {
