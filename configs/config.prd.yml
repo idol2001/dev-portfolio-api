@@ -1,0 +1,56 @@
+# production
+system:
+  app-name: dev-portfolio-api
+  run-mode: prd
+  db-type: sqlite
+  url-path-prefix: dev-portfolio/v1
+  port: 8080
+  base-api: http://127.0.0.1:8080
+  transaction: true
+  init-data: false
+logs:
+  level: 0
+  path: logs
+  max-size: 50
+  max-backups: 10
+  max-age: 30
+  compress: true
+
+# SQLite 配置
+sqlite:
+  file: "data/portfolio.db"
+
+# MySQL 配置（当 db-type: mysql 时生效）
+mysql:
+  username: ""
+  password: ""
+  database: ""
+  host: ""
+  port: 3306
+  query: charset=utf8mb4&parseTime=True&loc=Local&timeout=10000ms
+
+casbin:
+  model-path: "rbac_model.conf"
+
+jwt:
+  timeout: 2
+  max-refresh: 2
+
+casdoor:
+  endpoint: "http://127.0.0.1:8000"
+  client-id: ""
+  client-secret: ""
+  certificate-path: "casdoor-se.pem"
+  organization: "built-in"
+  application: "app-built-in"
+  frontend-url: "http://localhost:3000"
+
+# 阿里云 OSS 配置
+aliyun-oss:
+  enable: false
+  endpoint: "oss-cn-hangzhou.aliyuncs.com"
+  access-key-id: ""
+  access-key-secret: ""
+  bucket-name: ""
+  bucket-domain: ""
+  dir-prefix: "dev-portfolio"

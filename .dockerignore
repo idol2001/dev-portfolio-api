@@ -1,0 +1,39 @@
+# Build output
+main
+*.exe
+
+# Environment files (don't bake secrets into image)
+.env
+.env.local
+.env.*.local
+
+# Dependencies
+vendor/
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+
+# Logs
+logs/
+
+# Uploads (local storage, not needed in image)
+uploads/
+
+# Docker
+Dockerfile
+.dockerignore
+
+# Docs
+docs/
+README.md
+*.md
